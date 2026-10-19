@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java 選取執行器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><span class="logo">{ }</span><div><h1>Java 選取執行器</h1><p>選取程式碼，馬上看結果。</p></div></header>
+  <div class="status" role="status" id="status">正在檢查本機服務…</div>
+  <button id="run" type="button">▶ 執行已選取的 Java</button>
+  <p class="hint">也可以在網頁選取程式碼，點選旁邊的「執行 Java」，或使用滑鼠右鍵選單。</p>
+  <details><summary>第一次使用</summary><ol>
+    <li>安裝 Node.js 22 以上與 Docker Desktop，並啟動 Docker。</li>
+    <li>在專案資料夾執行 <code>npm run sandbox:build</code>（只需一次）。</li>
+    <li>執行 <code>npm start</code>，保持終端機開啟。</li>
+  </ol><p>程式碼只會送到本機，在 Java 21 沙箱中執行。支援完整 main 類別與簡單敘述片段。</p></details>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

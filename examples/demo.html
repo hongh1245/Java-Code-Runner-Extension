@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java 選取執行器 · 範例</title>
+  <style>
+    * { box-sizing: border-box; } body { margin: 0; background: #f3f6f4; color: #203c32; font: 15px/1.7 system-ui, sans-serif; }
+    nav { padding: 16px 6vw; border-bottom: 1px solid #dce5df; background: white; font-weight: 650; letter-spacing: .04em; }
+    nav span { float: right; font: 12px/2 monospace; color: #6d8479; }
+    main { max-width: 1040px; margin: 44px auto; padding: 0 28px; }
+    .eyebrow { font: 11px monospace; letter-spacing: .15em; color: #587c68; } h1 { margin: 8px 0; font-size: 30px; letter-spacing: -.03em; }
+    p { color: #64786e; max-width: 640px; } .code { margin-top: 25px; border: 1px solid #d8e2db; border-radius: 12px; background: white; overflow: hidden; max-width: 780px; }
+    .bar { display: flex; justify-content: space-between; padding: 11px 20px; border-bottom: 1px solid #e4ebe6; color: #7a8c82; font: 11px monospace; background: #fafcfb; }
+    pre { margin: 0; padding: 22px; overflow: auto; color: #28453b; font: 13px/1.75 ui-monospace, Consolas, monospace; tab-size: 4; }
+    ::selection { background: #d5e9e0; } .note { font-size: 12px; } kbd { padding: 2px 6px; border: 1px solid #d0ded5; border-radius: 4px; background: white; }
+  </style>
+</head>
+<body>
+  <nav>Java 選取執行器 <span>LEARN BY RUNNING</span></nav>
+  <main>
+    <div class="eyebrow">JAVA / EXCEPTION HANDLING</div>
+    <h1>這段程式，會印出什麼？</h1>
+    <p>選取下方的 Java 程式碼，點選「執行 Java」。不用離開網頁，就能在旁邊的小視窗查看真正的執行結果。</p>
+    <div class="code"><div class="bar"><span>Test.java</span><span>Java 21 · 選取即可執行</span></div><pre id="sample">public class Test {
+    static void mayRisk(int[] num) {
+        try {
+            System.out.println(num[1] / num[2]);
+        } catch (ArithmeticException e) {
+            System.out.println("First Exception");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            int[] arr = { 0, 200 };
+            mayRisk(arr);
+        } catch (IllegalArgumentException e1) {
+            System.out.println("Second Exception");
+        } catch (Exception e2) {
+            System.out.println("Third Exception");
+        }
+    }
+}</pre></div>
+    <p class="note">也可以選取後按滑鼠右鍵 →「執行選取的 Java 程式碼」。浮窗中可修改程式、輸入 stdin，按 <kbd>Ctrl / ⌘ + Enter</kbd> 重新執行。</p>
+  </main>
+</body>
+</html>
